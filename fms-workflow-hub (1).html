@@ -159,7 +159,7 @@
 <main>
   <div class="crumbs" id="crumbs"></div>
   <div id="app"></div>
-  <footer>FMS Workflow Hub · pilot build (OTD FMS live, more processes coming) · data stored locally until connected to Google Sheets</footer>
+  <footer>FMS Workflow Hub · 18 processes live · data source shown on each page</footer>
 </main>
 
 <script>
@@ -359,6 +359,9 @@ const FMS_CONFIGS = [
       {key:"month", label:"Filing Month", type:"month", required:true},
       {key:"company", label:"Company", type:"select", required:true,
        options:["Magnatek","Dynamed","Meditechnik India","Magnatek Pvt Ltd"]},
+    ],
+    stages: [
+      {num:1, title:"Invoice entry in Tally", doer:"Auditor Sunil", how:"GSTR1 Checklist", dueDay:6},
       {num:2, title:"Advance statement printout shown to Mngmt", doer:"Admin Manager Vinay", how:"GSTR1 Checklist", dueDay:6},
       {num:3, title:"File GSTR1", doer:"Admin Executive Waseem", how:"GSTR1 Checklist", dueDay:10},
       {num:4, title:"File printouts & show to Mngmt", doer:"Admin Executive Waseem", how:"GSTR1 Checklist", dueDay:12},
